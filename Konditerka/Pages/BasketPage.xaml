@@ -1,0 +1,79 @@
+﻿<Page x:Class="Konditerka.Pages.BasketPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Konditerka.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="BasketPage">
+
+    <Grid Background="#FF420046" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Корзина" FontFamily="Arial Black" FontSize="22" Foreground="White" Margin="5"/>
+
+        <DataGrid x:Name="BasketGrid"
+                  Grid.Row="1"
+                  Margin="5,15,5,10"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  CanUserAddRows="False"
+                  HeadersVisibility="Column"
+                  Background="White" FontFamily="Arial Black">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Товар" Width="*" Binding="{Binding ProductName}"/>
+                <DataGridTextColumn Header="Цена, ₽" Width="120" Binding="{Binding Price, StringFormat=N2}"/>
+                <DataGridTextColumn Header="Количество" Width="120" Binding="{Binding Quantity}"/>
+                <DataGridTextColumn Header="Сумма, ₽" Width="150" Binding="{Binding PositionTotal, StringFormat=N2}"/>
+                <DataGridTemplateColumn Header="Действие" Width="140">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Удалить"
+                                    Width="110"
+                                    Height="26"
+                                    FontFamily="Arial Black"
+                                    Foreground="Black"
+                                    Background="#FFE0C14D"
+                                    Click="RemoveItemButton_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <DockPanel Grid.Row="2" Margin="5">
+            <Button x:Name="GoToCatalogButton" Content="Вернуться в каталог"
+                    Width="190"
+                    Height="32"
+                    FontFamily="Arial Black"
+                    Foreground="Black"
+                    Background="#FFE0C14D"
+                    Click="GoToCatalogButton_Click"
+                    DockPanel.Dock="Left"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <TextBlock x:Name="TotalTextBlock" FontFamily="Arial Black" Foreground="White" VerticalAlignment="Center" Margin="0,0,20,0" FontSize="16"/>
+                <Button Content="Очистить корзину"
+                        Width="150"
+                        Height="32"
+                        Margin="0,0,10,0"
+                        FontFamily="Arial Black"
+                        Foreground="Black"
+                        Background="#FFE0C14D"
+                        Click="ClearBasketButton_Click"/>
+                <Button Content="Оформить заказ"
+                        Width="150"
+                        Height="32"
+                        FontFamily="Arial Black"
+                        Foreground="Black"
+                        Background="#FFE0C14D"
+                        Click="CheckoutButton_Click"/>
+            </StackPanel>
+        </DockPanel>
+    </Grid>
+</Page>
