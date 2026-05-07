@@ -28,23 +28,23 @@
                 <Label Content="Сумма" Foreground="#FF82DBFF" FontFamily="Arial Black" Margin="55,0,0,0"/>
                 <Label Content="Статус" Foreground="#FF82DBFF" FontFamily="Arial Black" Margin="73,0,0,0"/>
             </StackPanel>
-            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,10,0,0">
-                <TextBox  x:Name="UserIdBox" Width="90" Height="30" Margin="0,0,8,0" FontFamily="Arial Black" ToolTip="ID клиента" TabIndex="50" MaxLength="50" Background="#FF91009A" BorderBrush="#FFE0C14D" Foreground="#FF82DBFF">
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="5">
+                <TextBox  x:Name="UserIdBox" VerticalContentAlignment="Center" Width="90" Height="30" Margin="0,0,8,0" FontFamily="Arial Black" ToolTip="ID клиента" TabIndex="50" MaxLength="50" Background="#FF91009A" BorderBrush="#FFE0C14D" Foreground="#FF82DBFF">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="8"/>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <DatePicker x:Name="OrderDateBox" Width="140" Height="30" Margin="0,0,8,0" FontFamily="Arial Black" DisplayDateStart="2026/03/30"/>
-                <TextBox x:Name="OrderPriceBox" Width="120" Height="30" Margin="0,0,8,0" FontFamily="Arial Black" ToolTip="Сумма" TabIndex="50" MaxLength="50" Background="#FF91009A" BorderBrush="#FFE0C14D" Foreground="#FF82DBFF">
+                <DatePicker x:Name="OrderDateBox" Width="140" Height="30" Margin="0,0,8,0" FontFamily="Arial Black" DisplayDateStart="2026/01/01"/>
+                <TextBox x:Name="OrderPriceBox" VerticalContentAlignment="Center" Width="120" Height="30" Margin="0,0,8,0" FontFamily="Arial Black" ToolTip="Сумма" TabIndex="50" MaxLength="50" Background="#FF91009A" BorderBrush="#FFE0C14D" Foreground="#FF82DBFF">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="8"/>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <ComboBox x:Name="StatusBox" Width="180" Height="30" Margin="0,0,8,0" DisplayMemberPath="NameStatusOrder" SelectedValuePath="IdStatusOrder" FontFamily="Arial Black">
+                <ComboBox x:Name="StatusBox" VerticalContentAlignment="Center" Width="180" Height="30" Margin="0,0,8,0" DisplayMemberPath="NameStatusOrder" SelectedValuePath="IdStatusOrder" FontFamily="Arial Black">
                     <ComboBox.Resources>
                         <Style TargetType="{x:Type ComboBox}">
                             <Setter Property="Background" Value="#FF91009A"/>

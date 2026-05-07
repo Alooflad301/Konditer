@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="900"
       Title="AdminPage">
 
     <Grid Background="#FF420046">
@@ -13,18 +13,18 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Horizontal" Margin="10">
-            <Button Content="Товары" Width="120" Height="32" Margin="0,0,8,0" Click="ProductsButton_Click"
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <Button Content="Товары" Width="120" Height="32" Margin="5" Click="ProductsButton_Click"
                     FontFamily="Arial Black" Foreground="Black" Background="#FFE0C14D"/>
-            <Button Content="Категории" Width="120" Height="32" Margin="0,0,8,0" Click="CategoriesButton_Click"
+            <Button Content="Категории" Width="120" Height="32" Margin="5" Click="CategoriesButton_Click"
                     FontFamily="Arial Black" Foreground="Black" Background="#FFE0C14D"/>
-            <Button Content="Заказы" Width="120" Height="32" Margin="0,0,8,0" Click="OrdersButton_Click"
+            <Button Content="Заказы" Width="120" Height="32" Margin="5" Click="OrdersButton_Click"
                     FontFamily="Arial Black" Foreground="Black" Background="#FFE0C14D"/>
-            <Button Content="Пользователи" Width="140" Height="32" Margin="0,0,8,0" Click="UsersButton_Click"
+            <Button Content="Пользователи" Width="140" Height="32" Margin="5" Click="UsersButton_Click"
                     FontFamily="Arial Black" Foreground="Black" Background="#FFE0C14D"/>
-            <Button x:Name="CitiesButton" Content="Города" Width="140" Height="32" Margin="0,0,8,0" Click="CitiesButton_Click"
+            <Button x:Name="CitiesButton" Content="Города" Width="140" Height="32" Margin="5" Click="CitiesButton_Click"
                     FontFamily="Arial Black" Foreground="Black" Background="#FFE0C14D"/>
-            <Button x:Name="GoToCatalogButton" Content="Назад к каталогу" Width="140" Height="32" Margin="0,0,8,0" FontFamily="Arial Black" Foreground="Black" Background="#FFE0C14D" Click="GoToCatalogButton_Click"/>
+            <Button x:Name="GoToCatalogButton" Content="Назад к каталогу" Width="140" Height="32" Margin="5" FontFamily="Arial Black" Foreground="Black" Background="#FFE0C14D" Click="GoToCatalogButton_Click"/>
         </StackPanel>
 
         <Frame x:Name="AdminContentFrame" Grid.Row="1" Margin="10" NavigationUIVisibility="Hidden"/>

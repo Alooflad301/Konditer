@@ -33,7 +33,7 @@
 
             <StackPanel Orientation="Vertical" Margin="0,0,10,0">
                 <TextBlock Text="Название десерта" Foreground="#FF82DBFF" FontFamily="Arial Black"/>
-                <TextBox x:Name="ProductNameBox" Height="28" Margin="0,4,0,8" FontFamily="Arial Black" TabIndex="100" MaxLength="100" Background="#FF91009A" BorderBrush="#FFE0C14D" Foreground="#FF82DBFF">
+                <TextBox x:Name="ProductNameBox" VerticalContentAlignment="Center" Height="28" Margin="0,4,0,8" FontFamily="Arial Black" TabIndex="100" MaxLength="100" Background="#FF91009A" BorderBrush="#FFE0C14D" Foreground="#FF82DBFF">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="8"/>
@@ -42,7 +42,7 @@
                 </TextBox>
 
                 <TextBlock Text="Категория" Foreground="#FF82DBFF" FontFamily="Arial Black"/>
-                <ComboBox x:Name="CategoryBox" Height="28" Margin="0,4,0,8" DisplayMemberPath="NameCategory" SelectedValuePath="IdCategory" FontFamily="Arial Black">
+                <ComboBox x:Name="CategoryBox" Height="28" VerticalContentAlignment="Center" Margin="0,4,0,8" DisplayMemberPath="NameCategory" SelectedValuePath="IdCategory" FontFamily="Arial Black">
                     <ComboBox.Resources>
                         <Style TargetType="{x:Type ComboBox}">
                             <Setter Property="Background" Value="#FF91009A"/>
@@ -111,7 +111,7 @@
                 </ComboBox>
 
                 <TextBlock Text="Цена" Foreground="#FF82DBFF" FontFamily="Arial Black"/>
-                <TextBox x:Name="PriceBox" Height="28" Margin="0,4,0,8" FontFamily="Arial Black" TabIndex="50" MaxLength="50" Background="#FF91009A" BorderBrush="#FFE0C14D" Foreground="#FF82DBFF">
+                <TextBox x:Name="PriceBox" Height="28" VerticalContentAlignment="Center" Margin="0,4,0,8" FontFamily="Arial Black" TabIndex="50" MaxLength="50" Background="#FF91009A" BorderBrush="#FFE0C14D" Foreground="#FF82DBFF">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="8"/>
@@ -120,7 +120,7 @@
                 </TextBox>
 
                 <TextBlock Text="Описание" Foreground="#FF82DBFF" FontFamily="Arial Black"/>
-                <TextBox x:Name="DescriptionBox" Height="60" Margin="0,4,0,8" TextWrapping="Wrap" AcceptsReturn="True" FontFamily="Arial Black" TabIndex="1000" MaxLength="1000" Background="#FF91009A" BorderBrush="#FFE0C14D" Foreground="#FF82DBFF">
+                <TextBox x:Name="DescriptionBox" Height="60" Padding="8" Margin="0,4,0,8" TextWrapping="Wrap" AcceptsReturn="True" FontFamily="Arial Black" TabIndex="1000" MaxLength="1000" Background="#FF91009A" BorderBrush="#FFE0C14D" Foreground="#FF82DBFF">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="8"/>
@@ -129,7 +129,7 @@
                 </TextBox>
 
                 <TextBlock Text="Путь к изображению" Foreground="#FF82DBFF" FontFamily="Arial Black"/>
-                <TextBox x:Name="PhotoPathBox" Height="28" Margin="0,4,0,8" FontFamily="Arial Black" GotFocus="PhotoPathBox_GotFocus" TabIndex="100" Background="#FF91009A" BorderBrush="#FFE0C14D" Foreground="#FF82DBFF">
+                <TextBox x:Name="PhotoPathBox" Height="28" VerticalContentAlignment="Center" Margin="0,4,0,8" FontFamily="Arial Black" GotFocus="PhotoPathBox_GotFocus" TabIndex="100" Background="#FF91009A" BorderBrush="#FFE0C14D" Foreground="#FF82DBFF">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="8"/>

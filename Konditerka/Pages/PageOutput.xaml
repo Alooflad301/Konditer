@@ -18,7 +18,7 @@
             <ComboBox x:Name="ComboFilter" Margin="5" VerticalAlignment="Center" Width="209" Height="26" SelectionChanged="ComboFilter_SelectionChanged" FontFamily="Arial Black"/>
             <ComboBox x:Name="ComboSort" Margin="5" VerticalAlignment="Top" Width="120" Height="26" SelectionChanged="ComboSort_SelectionChanged" FontFamily="Arial Black"/>
             <TextBox x:Name="TextSearch"  Margin="5" TextWrapping="Wrap" VerticalAlignment="Center" Width="186" Height="26" TextChanged="TextSearch_TextChanged" FontFamily="Arial Black" TabIndex="100" MaxLength="100" ToolTip="Поиск..."/>
-            <Button x:Name="AddProductsButton" Content="Панель администратора" Height="30" Width="Auto" Padding="3" Click="AddProductsButton_Click" Loaded="AddProductsButton_Loaded" FontFamily="Arial Black" Foreground="Black" Background="#FFE0C14D" />
+            <Button x:Name="AddProductsButton" Content="Панель администратора" Height="30" Width="Auto" Padding="8,0,8,0" Click="AddProductsButton_Click" Loaded="AddProductsButton_Loaded" FontFamily="Arial Black" Foreground="Black" Background="#FFE0C14D" />
             <Button x:Name="GoToBasketButton" Margin="5,0,0,0" Height="30" Width="50" FontFamily="Arial Black" Foreground="Black" Click="GoToBasketButton_Click_1" RenderTransformOrigin="0.383,0.891" >
                 <Button.Background>
                     <ImageBrush ImageSource="/Pages/free-icon-shopping-cart-5087816.png" TileMode="None" Stretch="Uniform"/>

@@ -32,7 +32,7 @@
                 <Label Content="Роль" Foreground="#FF82DBFF" FontFamily="Arial Black" Margin="68,0,0,0"/>
                 <Label Content="Город" Foreground="#FF82DBFF" FontFamily="Arial Black" Margin="115,0,0,0"/>
             </StackPanel>
-            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
                 <TextBox x:Name="UserNameBox" VerticalContentAlignment="Center" Width="150" Height="30" Margin="0,0,8,0" FontFamily="Arial Black" TabIndex="50" ToolTip="Логин" MaxLength="50" Background="#FF91009A" BorderBrush="#FFE0C14D" Foreground="#FF82DBFF">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
