@@ -27,6 +27,20 @@ namespace Konditerka
         public string Product { get; set; }
         public string Descripton { get; set; }
         public string PhotoPath { get; set; }
+        public string CurrentPhoto
+        {
+            get
+            {
+                if (String.IsNullOrEmpty(PhotoPath) || String.IsNullOrWhiteSpace(PhotoPath))
+                {
+                    return @"/Images/Zagluhca.jpeg";
+                }
+                else
+                {
+                    return @"/Images/" + PhotoPath;
+                }
+            }
+        }
         public decimal Price { get; set; }
         public int IdCategory { get; set; }
         public bool IsActive { get; set; }
