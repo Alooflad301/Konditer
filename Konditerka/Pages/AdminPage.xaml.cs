@@ -12,7 +12,7 @@ namespace Konditerka.Pages
         public AdminPage()
         {
             InitializeComponent();
-            WindowSizeHelper.SetMinSize(450, 1250);
+            WindowSizeHelper.SetMinSize(450, 550);
         }
 
         private void ProductsButton_Click(object sender, RoutedEventArgs e)

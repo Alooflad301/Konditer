@@ -33,7 +33,7 @@ namespace Konditerka
             {
                 if (String.IsNullOrEmpty(PhotoPath) || String.IsNullOrWhiteSpace(PhotoPath))
                 {
-                    return @"/Images/Zagluhca.jpeg";
+                    return @"/Images/Zagluhca.jpg";
                 }
                 else
                 {

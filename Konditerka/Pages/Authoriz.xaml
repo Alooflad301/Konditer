@@ -59,7 +59,7 @@
             </PasswordBox.Resources>
         </PasswordBox>
         <Button x:Name="LoginButton" Content="Войти" HorizontalAlignment="Center" Margin="0,40,0,5" VerticalAlignment="Top" Width="274" Height="37" FontFamily="Arial Black" FontSize="16" Background="#FFE0C14D" Foreground="Black" Click="LoginButton_Click"/>
-        <Button x:Name="OpenRegButton" Content="Зарегистрироватся" HorizontalAlignment="Center" Margin="5" VerticalAlignment="Top" Width="274" Height="37" FontFamily="Arial Black" FontSize="16" Background="#FFE0C14D" Foreground="Black" Click="OpenRegButton_Click"/>
+        <Button x:Name="OpenRegButton" Content="Регистрация" HorizontalAlignment="Center" Margin="5" VerticalAlignment="Top" Width="274" Height="37" FontFamily="Arial Black" FontSize="16" Background="#FFE0C14D" Foreground="Black" Click="OpenRegButton_Click"/>
         </StackPanel>
     </Grid>
 </Page>
