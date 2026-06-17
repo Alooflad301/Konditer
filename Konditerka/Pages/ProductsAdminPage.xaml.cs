@@ -22,6 +22,7 @@ namespace Konditerka.Pages
             }
             DataContext = catalogs;
             RefreshData();
+            WindowSizeHelper.SetMinSize(400, 760);
         }
 
         private void RefreshData()

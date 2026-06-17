@@ -24,6 +24,7 @@ namespace Konditerka.Pages
         public Authoriz()
         {
             InitializeComponent();
+            WindowSizeHelper.SetMinSize(500, 450);
         }
 
         private void OpenRegButton_Click(object sender, RoutedEventArgs e)

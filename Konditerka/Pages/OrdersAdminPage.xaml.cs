@@ -15,6 +15,7 @@ namespace Konditerka.Pages
             InitializeComponent();
             StatusBox.ItemsSource = AppConnect.model0db.StatusOrders.ToList();
             RefreshData();
+            WindowSizeHelper.SetMinSize(400, 760);
         }
 
         private void RefreshData()

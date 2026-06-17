@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Konditerka.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800" MinHeight="500"
+      d:DesignHeight="450" d:DesignWidth="800"
       Title="PageOutput">
 
     <Grid Background="#FF420046">
@@ -51,6 +51,9 @@
                                 <TextBlock TextWrapping="Wrap" Height="auto" Margin="0,0,0,10" FontFamily="Arial Black"><Run Text="Описание: "/><Run Text=" "/><Run Text="{Binding Descripton}"/></TextBlock>
                                 <TextBlock TextWrapping="Wrap" Height="auto" Margin="0,0,0,10" FontFamily="Arial Black"><Run Text="Цена: "/><Run Text=" "/><Run Text="{Binding Price}"/></TextBlock>
                                 <Button x:Name="AddToBusketButton" Content="Добавить в корзину" Margin="0,50,300,10" Height="30" Width="150" FontFamily="Arial Black" Foreground="Black" Background="#FFE0C14D" Click="AddToBusketButton_Click"/>
+                                <Button Content="Отзывы" Margin="160,50,0,10" Height="30" Width="80"
+        FontFamily="Arial Black" Foreground="Black" Background="#FF91009A"
+        BorderBrush="#FFE0C14D" Click="ReviewsButton_Click"/>
                             </StackPanel>
                             
                         </Grid>

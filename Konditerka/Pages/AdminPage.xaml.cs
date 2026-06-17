@@ -12,6 +12,7 @@ namespace Konditerka.Pages
         public AdminPage()
         {
             InitializeComponent();
+            WindowSizeHelper.SetMinSize(450, 1250);
         }
 
         private void ProductsButton_Click(object sender, RoutedEventArgs e)
@@ -21,7 +22,8 @@ namespace Konditerka.Pages
 
         private void CategoriesButton_Click(object sender, RoutedEventArgs e)
         {
-            AdminContentFrame.Navigate(new CategoriesAdminPage());
+            AdminContentFrame.Navigate(new DictionaryAdminPage("Категории",
+    DictionaryAdminPage.DictionaryType.Categories));
         }
 
         private void OrdersButton_Click(object sender, RoutedEventArgs e)
@@ -41,7 +43,19 @@ namespace Konditerka.Pages
 
         private void CitiesButton_Click(object sender, RoutedEventArgs e)
         {
-            AdminContentFrame.Navigate(new CitiesAdminPage());
+            AdminContentFrame.Navigate(new DictionaryAdminPage("Города",
+    DictionaryAdminPage.DictionaryType.Cities));
         }
+        private void UnitsButton_Click(object sender, RoutedEventArgs e)
+    => AdminContentFrame.Navigate(new DictionaryAdminPage("Единицы измерения",
+           DictionaryAdminPage.DictionaryType.Units));
+
+        private void PaymentButton_Click(object sender, RoutedEventArgs e)
+            => AdminContentFrame.Navigate(new DictionaryAdminPage("Способы оплаты",
+                   DictionaryAdminPage.DictionaryType.PaymentMethods));
+
+        private void DeliveryButton_Click(object sender, RoutedEventArgs e)
+            => AdminContentFrame.Navigate(new DictionaryAdminPage("Способы доставки",
+                   DictionaryAdminPage.DictionaryType.DeliveryMethods));
     }
 }

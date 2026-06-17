@@ -36,5 +36,11 @@ namespace Konditerka
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Users> Users { get; set; }
         public virtual DbSet<Cities> Cities { get; set; }
+        public virtual DbSet<CatalogIngredients> CatalogIngredients { get; set; }
+        public virtual DbSet<DeliveryMethods> DeliveryMethods { get; set; }
+        public virtual DbSet<Ingredients> Ingredients { get; set; }
+        public virtual DbSet<PaymentMethods> PaymentMethods { get; set; }
+        public virtual DbSet<Reviews> Reviews { get; set; }
+        public virtual DbSet<Units> Units { get; set; }
     }
 }

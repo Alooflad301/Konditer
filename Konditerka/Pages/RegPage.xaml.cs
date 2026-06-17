@@ -27,6 +27,7 @@ namespace Konditerka.Pages
         {
             InitializeComponent();
             Fill();
+            WindowSizeHelper.SetMinSize(800, 650);
         }
 
         public void Fill()

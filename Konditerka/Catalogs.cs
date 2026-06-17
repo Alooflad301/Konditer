@@ -19,35 +19,26 @@ namespace Konditerka
         {
             this.BasketsCatalogs = new HashSet<BasketsCatalogs>();
             this.OrdersCatalogs = new HashSet<OrdersCatalogs>();
+            this.CatalogIngredients = new HashSet<CatalogIngredients>();
+            this.Reviews = new HashSet<Reviews>();
         }
     
         public int IdCatalog { get; set; }
         public string Product { get; set; }
         public string Descripton { get; set; }
         public string PhotoPath { get; set; }
-        
-        public string CurrentPhoto
-        {
-            get
-            {
-                if (String.IsNullOrEmpty(PhotoPath) || String.IsNullOrWhiteSpace(PhotoPath))
-                {
-                    return @"/Images/empty.png";
-                }
-                else
-                {
-                    return @"/Images/" + PhotoPath;
-                }
-            }
-        }
-
         public decimal Price { get; set; }
         public int IdCategory { get; set; }
+        public bool IsActive { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BasketsCatalogs> BasketsCatalogs { get; set; }
         public virtual Categories Categories { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrdersCatalogs> OrdersCatalogs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CatalogIngredients> CatalogIngredients { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Reviews> Reviews { get; set; }
     }
 }

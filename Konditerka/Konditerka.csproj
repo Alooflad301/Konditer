@@ -84,10 +84,14 @@
     <Compile Include="AppData\BasketManager.cs" />
     <Compile Include="AppData\CurrentUser.cs" />
     <Compile Include="AppData\ValidationPhoneAndEmail.cs" />
+    <Compile Include="AppData\WindowSizeHelper.cs" />
     <Compile Include="Baskets.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="BasketsCatalogs.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogIngredients.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Catalogs.cs">
@@ -97,6 +101,12 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Cities.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryMethods.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ingredients.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
@@ -126,11 +136,17 @@
     <Compile Include="Pages\BasketPage.xaml.cs">
       <DependentUpon>BasketPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\CheckoutPage.xaml.cs">
+      <DependentUpon>CheckoutPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\CitiesAdminPage.xaml.cs">
       <DependentUpon>CitiesAdminPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\CategoriesAdminPage.xaml.cs">
       <DependentUpon>CategoriesAdminPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DictionaryAdminPage.xaml.cs">
+      <DependentUpon>DictionaryAdminPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\OrdersAdminPage.xaml.cs">
       <DependentUpon>OrdersAdminPage.xaml</DependentUpon>
@@ -147,8 +163,17 @@
     <Compile Include="Pages\RegPage.xaml.cs">
       <DependentUpon>RegPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ReviewsPage.xaml.cs">
+      <DependentUpon>ReviewsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\UsersAdminPage.xaml.cs">
       <DependentUpon>UsersAdminPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentMethods.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Reviews.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Roles.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -157,6 +182,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Units.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Users.cs">
@@ -183,6 +211,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\CheckoutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\CitiesAdminPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -192,6 +224,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Authoriz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\DictionaryAdminPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -208,6 +244,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\RegPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ReviewsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -259,6 +299,12 @@
     <Resource Include="Images\logo.png" />
     <Resource Include="Birthday_Cake_icon-icons.com_68779.ico" />
     <Resource Include="Images\napoleon.jpg" />
+    <Resource Include="Images\Zagluhca.jpg" />
+    <Resource Include="Images\medovik.jpg" />
+    <Resource Include="Images\macarons.jpg" />
+    <Resource Include="Images\ecler.jpg" />
+    <Resource Include="Images\tiramisu.jpg" />
+    <Resource Include="Images\muffin.jpg" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>

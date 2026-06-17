@@ -26,8 +26,10 @@ namespace Konditerka.Pages
         public PageOutput()
         {
             InitializeComponent();
+            WindowSizeHelper.SetMinSize(500,800);
             ListProducts.ItemsSource = AppConnect.model0db.Catalogs.ToList();
             Fill();
+            
         }
 
         public void Fill()
@@ -163,6 +165,13 @@ namespace Konditerka.Pages
         private void GoToBasketButton_Click_1(object sender, RoutedEventArgs e)
         {
             AppFrame.framemain.Navigate(new BasketPage());
+        }
+        private void ReviewsButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            Catalogs product = button?.DataContext as Catalogs;
+            if (product == null) return;
+            AppFrame.framemain?.Navigate(new ReviewsPage(product));
         }
     }
 }

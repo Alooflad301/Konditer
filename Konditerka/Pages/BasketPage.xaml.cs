@@ -24,6 +24,7 @@ namespace Konditerka.Pages
         {
             InitializeComponent();
             LoadBasket();
+            WindowSizeHelper.SetMinSize(450, 800);
         }
 
         private void LoadBasket()
@@ -72,58 +73,13 @@ namespace Konditerka.Pages
 
         private void CheckoutButton_Click(object sender, RoutedEventArgs e)
         {
-            try
+            if (_items.Count == 0)
             {
-                if (_items.Count == 0)
-                {
-                    MessageBox.Show("Корзина пуста. Добавьте товары перед оформлением заказа.");
-                    return;
-                }
-
-                Baskets basket = BasketManager.GetOrCreateCurrentBasket();
-                decimal total = _items.Sum(x => x.PositionTotal);
-
-                using (var transaction = AppConnect.model0db.Database.BeginTransaction())
-                {
-                    Orders order = new Orders
-                    {
-                        IdUser = CurrentUser.User.IdUser,
-                        Data = DateTime.Now,
-                        Price = total,
-                        IdStatusOrder = GetDefaultStatusId()
-                    };
-
-                    AppConnect.model0db.Orders.Add(order);
-                    AppConnect.model0db.SaveChanges();
-
-                    foreach (BasketItemViewModel item in _items)
-                    {
-                        AppConnect.model0db.OrdersCatalogs.Add(new OrdersCatalogs
-                        {
-                            IdOrder = order.IdOrder,
-                            IdCatalog = item.IdCatalog,
-                            Quantity = item.Quantity
-                        });
-                    }
-
-                    basket.IsOrdered = true;
-                    basket.TotalPrice = total;
-
-                    AppConnect.model0db.SaveChanges();
-                    transaction.Commit();
-
-                    string pdfPath = GenerateAndSaveCheck(order, _items);
-                    BasketManager.ClearCurrentBasket();
-
-                    MessageBox.Show($"Заказ №{order.IdOrder} успешно оформлен.\nЧек сохранен: {pdfPath}", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-
-                LoadBasket();
+                MessageBox.Show("Корзина пуста.");
+                return;
             }
-            catch (Exception ex)
-            {
-
-            }
+            decimal total = _items.Sum(x => x.PositionTotal);
+            AppFrame.framemain?.Navigate(new CheckoutPage(_items, total));
         }
 
         private int GetDefaultStatusId()

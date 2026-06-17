@@ -12,29 +12,18 @@ namespace Konditerka
     using System;
     using System.Collections.Generic;
     
-    public partial class Orders
+    public partial class PaymentMethods
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Orders()
+        public PaymentMethods()
         {
-            this.OrdersCatalogs = new HashSet<OrdersCatalogs>();
+            this.Orders = new HashSet<Orders>();
         }
     
-        public int IdOrder { get; set; }
-        public int IdUser { get; set; }
-        public int IdStatusOrder { get; set; }
-        public System.DateTime Data { get; set; }
-        public decimal Price { get; set; }
         public int IdPaymentMethod { get; set; }
-        public int IdDeliveryMethod { get; set; }
-        public string DeliveryAddress { get; set; }
-        public string Comment { get; set; }
+        public string NamePaymentMethod { get; set; }
     
-        public virtual StatusOrders StatusOrders { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrdersCatalogs> OrdersCatalogs { get; set; }
-        public virtual DeliveryMethods DeliveryMethods { get; set; }
-        public virtual PaymentMethods PaymentMethods { get; set; }
-        public virtual Users Users { get; set; }
+        public virtual ICollection<Orders> Orders { get; set; }
     }
 }

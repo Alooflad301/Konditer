@@ -13,6 +13,7 @@ namespace Konditerka.Pages
         public UsersAdminPage()
         {
             InitializeComponent();
+            WindowSizeHelper.SetMinSize(400, 1100);
             RoleBox.ItemsSource = AppConnect.model0db.Roles.ToList();
             CityBox.ItemsSource = AppConnect.model0db.Cities.ToList();
             RefreshData();

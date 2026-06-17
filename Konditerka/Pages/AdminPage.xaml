@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="900"
+      d:DesignHeight="450" d:DesignWidth="1250"
       Title="AdminPage">
 
     <Grid Background="#FF420046">
@@ -24,7 +24,17 @@
                     FontFamily="Arial Black" Foreground="Black" Background="#FFE0C14D"/>
             <Button x:Name="CitiesButton" Content="Города" Width="140" Height="32" Margin="5" Click="CitiesButton_Click"
                     FontFamily="Arial Black" Foreground="Black" Background="#FFE0C14D"/>
-            <Button x:Name="GoToCatalogButton" Content="Назад к каталогу" Width="140" Height="32" Margin="5" FontFamily="Arial Black" Foreground="Black" Background="#FFE0C14D" Click="GoToCatalogButton_Click"/>
+            
+            <Button Content="Единицы" Width="120" Height="32" Margin="5"
+        Click="UnitsButton_Click"
+        FontFamily="Arial Black" Foreground="Black" Background="#FFE0C14D"/>
+            <Button Content="Оплата" Width="120" Height="32" Margin="5"
+        Click="PaymentButton_Click"
+        FontFamily="Arial Black" Foreground="Black" Background="#FFE0C14D"/>
+            <Button Content="Доставка" Width="120" Height="32" Margin="5"
+        Click="DeliveryButton_Click"
+        FontFamily="Arial Black" Foreground="Black" Background="#FFE0C14D"/>
+        <Button x:Name="GoToCatalogButton" Content="Назад к каталогу" Width="140" Height="32" Margin="5" FontFamily="Arial Black" Foreground="Black" Background="#FFE0C14D" Click="GoToCatalogButton_Click"/>
         </StackPanel>
 
         <Frame x:Name="AdminContentFrame" Grid.Row="1" Margin="10" NavigationUIVisibility="Hidden"/>

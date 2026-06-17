@@ -18,6 +18,8 @@ namespace Konditerka
         public Users()
         {
             this.Baskets = new HashSet<Baskets>();
+            this.Orders = new HashSet<Orders>();
+            this.Reviews = new HashSet<Reviews>();
         }
     
         public int IdUser { get; set; }
@@ -26,10 +28,16 @@ namespace Konditerka
         public string Password { get; set; }
         public string Email { get; set; }
         public int IdCity { get; set; }
+        public string Phone { get; set; }
+        public System.DateTime CreatedAt { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Baskets> Baskets { get; set; }
         public virtual Roles Roles { get; set; }
         public virtual Cities Cities { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Orders> Orders { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Reviews> Reviews { get; set; }
     }
 }

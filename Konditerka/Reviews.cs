@@ -12,15 +12,16 @@ namespace Konditerka
     using System;
     using System.Collections.Generic;
     
-    public partial class OrdersCatalogs
+    public partial class Reviews
     {
-        public int IdOrderCatalog { get; set; }
-        public int IdOrder { get; set; }
+        public int IdReview { get; set; }
+        public int IdUser { get; set; }
         public int IdCatalog { get; set; }
-        public int Quantity { get; set; }
-        public decimal PriceAtOrder { get; set; }
+        public byte Rating { get; set; }
+        public string Comment { get; set; }
+        public System.DateTime CreatedAt { get; set; }
     
         public virtual Catalogs Catalogs { get; set; }
-        public virtual Orders Orders { get; set; }
+        public virtual Users Users { get; set; }
     }
 }
