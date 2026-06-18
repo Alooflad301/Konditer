@@ -17,7 +17,6 @@ namespace Konditerka.Pages
     {
         public enum DictionaryType { Categories, Cities, Units, PaymentMethods, DeliveryMethods }
 
-        // Простая ViewModel для единого отображения в DataGrid
         private class DictItem
         {
             public int Id { get; set; }
@@ -31,14 +30,12 @@ namespace Konditerka.Pages
         {
             InitializeComponent();
             _type = type;
-            // Установить заголовок страницы динамически
-            if (Parent is Frame f) { /* на случай если нужно */ }
+            if (Parent is Frame f) {}
             Title = title;
             RefreshData();
             WindowSizeHelper.SetMinSize(400, 760);
         }
 
-        // ── Загрузка ──────────────────────────────────────────────
 
         private void RefreshData()
         {
@@ -77,7 +74,6 @@ namespace Konditerka.Pages
             return list;
         }
 
-        // ── Кнопки ────────────────────────────────────────────────
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {

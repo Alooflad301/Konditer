@@ -33,7 +33,6 @@ namespace Konditerka.Pages
             ProductTitleBlock.Text = $"Отзывы: {product.Product}";
             LoadReviews();
 
-            // Если пользователь не авторизован — скрыть форму
             if (!BasketManager.IsUserAuthorized())
             {
                 SubmitButton.IsEnabled = false;
@@ -43,7 +42,6 @@ namespace Konditerka.Pages
             }
             else
             {
-                // Проверить, оставлял ли пользователь уже отзыв
                 int uid = CurrentUser.User.IdUser;
                 bool alreadyReviewed = AppConnect.model0db.Reviews
                     .Any(r => r.IdUser == uid && r.IdCatalog == _product.IdCatalog);
@@ -127,7 +125,6 @@ namespace Konditerka.Pages
                 MessageBox.Show("Спасибо за ваш отзыв!", "Готово",
                     MessageBoxButton.OK, MessageBoxImage.Information);
 
-                // Сбросить форму и заблокировать повторный отзыв
                 _selectedRating = 0;
                 UpdateStarDisplay();
                 RatingLabel.Text = string.Empty;
